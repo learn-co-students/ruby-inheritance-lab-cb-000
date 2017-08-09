@@ -1,4 +1,4 @@
-require '/Users/jd/Documents/applicationDevelopment/flatiron/web/ruby-inheritance-lab-cb-000/lib/user.rb'
+require 'user.rb'
 
 class Student < User
   @knowledge = []
