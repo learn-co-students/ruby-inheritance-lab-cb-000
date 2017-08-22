@@ -8,13 +8,34 @@ steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
 
+amy = Student.new
+amy.first_name = "Amy"
+amy.last_name = "a Student"
+
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+# jim = User.new
+# jim.first_name = "Jim"
+# jim.last_name = "Jim's Last Name"
 
-some_knowledge = avi.teach 
 
-steve.learn(some_knowledge)
+steve.learn(avi.teach)
+steve.learn(avi.teach)
+steve.learn(avi.teach)
 
-puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+amy.learn(avi.teach)
+amy.learn(avi.teach)
+amy.learn(avi.teach)
+
+all_steve_knowledge = steve.knowledge.tap { | knowledge | knowledge }.join(', ')
+all_amy_knowledge = amy.knowledge.tap { | knowledge | knowledge }.join(', ')
+
+# puts "Steve just learned this important knowledge: #{all_steve_knowledge} from Avi"
+
+puts "Avi just taught Amy some important stuff, like #{all_amy_knowledge}."
+puts "Steve also learned some important things, things like #{all_steve_knowledge}."
+
+# puts NoMethodError
+# jim.learn(some_knowledge)
