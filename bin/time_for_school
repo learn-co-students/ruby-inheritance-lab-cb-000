@@ -13,8 +13,35 @@ avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
+
+some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+# Lab stuff
+
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Dean"
+
+#jim.learn(avi.teach)
+
+
+steve.learn(avi.teach)
+steve.learn(avi.teach)
+
+new_guy = Student.new
+new_guy.first_name = "Mister"
+new_guy.last_name = "Tamborineman"
+new_guy.learn(avi.teach)
+new_guy.learn(avi.teach)
+
+
+[steve,new_guy].each do |student|
+   puts "#{student.first_name} #{student.last_name} has learned these things:"
+   student.knowledge.each_with_index do |tidbit, index|
+     puts "#{index+1}. #{tidbit}"
+   end
+end
