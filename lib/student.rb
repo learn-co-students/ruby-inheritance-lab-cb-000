@@ -1,3 +1,17 @@
-class Student 
+class Student < User
 
+  attr_accessor
+
+  def initialize
+    @knowledge = []
+  end
+
+  def learn(data)
+    @knowledge << data
+  end
+
+  def knowledge
+    @knowledge
+  end
+  
 end
