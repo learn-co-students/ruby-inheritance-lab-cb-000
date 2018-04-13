@@ -4,17 +4,33 @@ require_relative "../lib/user.rb"
 require_relative "../lib/teacher.rb"
 require_relative "../lib/student.rb"
 
+# jim = User.new
+# jim.first_name = "Jim"
+# jim.last_name = "Bob"
+
 steve = Student.new
 steve.first_name = "Steve"
 steve.last_name = "Jobs"
+
+allan = Student.new
+allan.first_name = "Allan"
+allan.last_name = "Glasier"
 
 avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
 
-some_knowledge = avi.teach 
-
+some_knowledge = avi.teach
 steve.learn(some_knowledge)
+allan.learn(some_knowledge)
+some_knowledge = avi.teach
+steve.learn(some_knowledge)
+allan.learn(some_knowledge)
+# jim.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "Allan just learned this important knowledge: '#{allan.knowledge.first}' from Avi"
+# puts "Jim just learned this important knowledge: '#{jim.knowledge.first}' from Avi"
+puts "Steve has learned #{steve.knowledge.join(", ")}"
+puts "Allan has learned #{allan.knowledge.join(", ")}"
