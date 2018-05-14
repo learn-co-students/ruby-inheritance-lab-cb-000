@@ -12,9 +12,18 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Wiles"
+
 
 some_knowledge = avi.teach 
 
 steve.learn(some_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+
+# jim.learn(some_knowledge) # get no method error
+
+more_knowledge = avi.teach
+steve.learn(more_knowledge)
