@@ -4,3 +4,4 @@ class Teacher < User
     KNOWLEDGE[rand(KNOWLEDGE.length)]
   end
 end
+
