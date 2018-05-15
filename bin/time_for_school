@@ -16,7 +16,6 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
-<<<<<<< HEAD
 jim = Student.new
 jim.first_name = "Jim"
 jim.last_name = "Adam"
@@ -24,22 +23,18 @@ jim.last_name = "Adam"
 
 some_knowledge = avi.teach
 more_knowledge = avi.teach
-=======
+
 jim = User.new
 jim.first_name = "Jim"
 jim.last_name = "Adam"
 
 
 some_knowledge = avi.teach
->>>>>>> 40e53d5c609f831307498c5eab209ea79bb82416
 
 steve.learn(some_knowledge)
 david.learn(more_knowledge)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
-<<<<<<< HEAD
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
 puts "David just learned this important knowledge: '#{david.knowledge.first}' from Avi"
-=======
 puts "Steve just learned this important knowledge: '#{steve.knowledge.second}' from Avi"
->>>>>>> 40e53d5c609f831307498c5eab209ea79bb82416
