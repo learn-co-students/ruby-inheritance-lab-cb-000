@@ -16,5 +16,23 @@ avi.last_name = "Flombaum"
 some_knowledge = avi.teach 
 
 steve.learn(some_knowledge)
+str = steve.knowledge
 
-puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Beam"
+more_knowledge = avi.teach
+#cannot learn; User has no learn method
+
+steve.learn(more_knowledge)
+
+paul = Student.new 
+paul.first_name = "Paul"
+paul.last_name = "Gustafson"
+pauls_knowledge = avi.teach 
+paul.learn(pauls_knowledge)
+
+
+steve.knowledge 
+paul.knowledge 
+
